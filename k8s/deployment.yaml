@@ -1,27 +1,27 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: secatio
+  name: succes
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: secatio
+      app: succes
   template:
     metadata:
       labels:
-        app: secatio
+        app: succes
     spec:
       containers:
-      - image: okteto.dev/secatio:latest
-        name: secatio
+      - image: okteto.dev/succes:latest
+        name: succes
         ports:
         - containerPort: 8080
         env:
         - name: PORT
           value: "8080"
         - name: ProxySite
-          value: "mirror.umd.edu"
+          value: "icook.tw"
         - name: Vless_UUID
           value: "93a65a8a-1356-4ee4-ab66-53504a4f6466"
         - name: Vless_Path
