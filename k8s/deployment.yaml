@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: arouck
+  name: seempo
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: arouck
+      app: seempo
   template:
     metadata:
       labels:
-        app: arouck
+        app: seempo
     spec:
       containers:
-      - image: okteto.dev/arouck:latest
-        name: arouck
+      - image: okteto.dev/seempo:latest
+        name: seempo
         ports:
         - containerPort: 8080
         env:
