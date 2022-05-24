@@ -1,27 +1,27 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: succes
+  name: tergos
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: succes
+      app: tergos
   template:
     metadata:
       labels:
-        app: succes
+        app: tergos
     spec:
       containers:
-      - image: okteto.dev/succes:latest
-        name: succes
+      - image: okteto.dev/tergos:latest
+        name: tergos
         ports:
         - containerPort: 8080
         env:
         - name: PORT
           value: "8080"
         - name: ProxySite
-          value: "mirror.umd.edu"
+          value: "icook.tw"
         - name: Vless_UUID
           value: "93a65a8a-1356-4ee4-ab66-53504a4f6466"
         - name: Vless_Path
