@@ -1,27 +1,27 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: seempo
+  name: catio
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: seempo
+      app: catio
   template:
     metadata:
       labels:
-        app: seempo
+        app: catio
     spec:
       containers:
-      - image: okteto.dev/seempo:latest
-        name: seempo
+      - image: okteto.dev/catio:latest
+        name: catio
         ports:
         - containerPort: 8080
         env:
         - name: PORT
           value: "8080"
         - name: ProxySite
-          value: "mirror.umd.edu"
+          value: "bongo.cat"
         - name: Vless_UUID
           value: "93a65a8a-1356-4ee4-ab66-53504a4f6466"
         - name: Vless_Path
