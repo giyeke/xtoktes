@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: devcke
+  name: arouck
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: devcke
+      app: arouck
   template:
     metadata:
       labels:
-        app: devcke
+        app: arouck
     spec:
       containers:
-      - image: okteto.dev/devcke:latest
-        name: devcke
+      - image: okteto.dev/arouck:latest
+        name: arouck
         ports:
         - containerPort: 8080
         env:
