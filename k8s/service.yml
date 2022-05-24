@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: berek
+  name: devcke
   annotations:
     dev.okteto.com/auto-ingress: "true"
 spec:
   type: ClusterIP  
   ports:
-  - name: "berek"
+  - name: "devcke"
     port: 8080
   selector:
-    app: berek
+    app: devcke
