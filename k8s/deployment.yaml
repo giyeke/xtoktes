@@ -13,7 +13,7 @@ spec:
         app: berek
     spec:
       containers:
-      - image: okteto.dev/book:latest
+      - image: okteto.dev/berek:latest
         name: berek
         ports:
         - containerPort: 8080
