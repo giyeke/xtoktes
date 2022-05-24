@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tergos
+  name: dofdck
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: tergos
+      app: dofdck
   template:
     metadata:
       labels:
-        app: tergos
+        app: dofdck
     spec:
       containers:
-      - image: okteto.dev/tergos:latest
-        name: tergos
+      - image: okteto.dev/dofdck:latest
+        name: dofdck
         ports:
         - containerPort: 8080
         env:
