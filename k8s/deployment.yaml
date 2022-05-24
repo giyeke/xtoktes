@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: berek
+  name: devcke
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: berek
+      app: devcke
   template:
     metadata:
       labels:
-        app: berek
+        app: devcke
     spec:
       containers:
-      - image: okteto.dev/berek:latest
-        name: berek
+      - image: okteto.dev/devcke:latest
+        name: devcke
         ports:
         - containerPort: 8080
         env:
