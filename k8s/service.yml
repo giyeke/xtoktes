@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: tergos
+  name: dofdck
   annotations:
     dev.okteto.com/auto-ingress: "true"
 spec:
   type: ClusterIP  
   ports:
-  - name: "tergos"
+  - name: "dofdck"
     port: 8080
   selector:
-    app: tergos
+    app: dofdck
